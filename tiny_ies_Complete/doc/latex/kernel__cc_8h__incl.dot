@@ -1,0 +1,36 @@
+digraph "kernel_cc.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="kernel_cc.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="kernel_sys.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kernel__sys_8h_source.html"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="bios.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bios_8h.html",tooltip="The Virtual Machine API. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="ucontext.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="tinyos.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tinyos_8h.html",tooltip="Public kernel API. "];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node0 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="kernel_sched.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kernel__sched_8h.html",tooltip="TinyOS kernel: The Scheduler API. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="util.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$util_8h.html",tooltip="Tinyos utility code. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="string.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="errno.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="setjmp.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="assert.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+}

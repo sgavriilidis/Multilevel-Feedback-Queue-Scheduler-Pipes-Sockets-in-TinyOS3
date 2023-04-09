@@ -1,0 +1,20 @@
+digraph "kernel_dev.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node11 [label="kernel_dev.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="kernel_streams.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kernel__streams_8h.html",tooltip="Support for I/O streams. "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="console.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c_source.html"];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="kernel_dev.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kernel__dev_8c_source.html"];
+  Node12 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="kernel_init.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kernel__init_8c_source.html"];
+  Node12 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="kernel_proc.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kernel__proc_8c_source.html"];
+  Node12 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="kernel_streams.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kernel__streams_8c_source.html"];
+  Node11 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

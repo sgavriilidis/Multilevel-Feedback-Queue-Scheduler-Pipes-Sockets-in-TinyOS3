@@ -1,0 +1,8 @@
+digraph "device_control_block"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{device_control_block\n|+ type\l+ devnum\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +dev_fops" ,arrowhead="odiamond"];
+  Node2 [label="{file_operations\n|+ Open\l+ Read\l+ Write\l+ Close\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfile__operations.html",tooltip="The device-specific file operations table. "];
+}

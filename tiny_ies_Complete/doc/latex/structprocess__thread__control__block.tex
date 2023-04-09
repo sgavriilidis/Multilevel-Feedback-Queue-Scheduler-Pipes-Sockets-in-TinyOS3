@@ -1,0 +1,68 @@
+\hypertarget{structprocess__thread__control__block}{}\section{process\+\_\+thread\+\_\+control\+\_\+block Struct Reference}
+\label{structprocess__thread__control__block}\index{process\+\_\+thread\+\_\+control\+\_\+block@{process\+\_\+thread\+\_\+control\+\_\+block}}
+
+
+The thread control block.  
+
+
+
+
+{\ttfamily \#include $<$kernel\+\_\+sched.\+h$>$}
+
+
+
+Collaboration diagram for process\+\_\+thread\+\_\+control\+\_\+block\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_abdaca0a35490723315d35f666992580d}\label{structprocess__thread__control__block_abdaca0a35490723315d35f666992580d}} 
+\hyperlink{group__proc_gadf327f09ee935cf1734c14e8849f0421}{P\+CB} $\ast$ {\bfseries parent}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_ae03cb19c83afeaffb2d7b402287c678c}\label{structprocess__thread__control__block_ae03cb19c83afeaffb2d7b402287c678c}} 
+\hyperlink{group__scheduler_ga2115e4c199a702aaf36f4571877bf013}{P\+T\+CB} $\ast$ {\bfseries ptcb\+\_\+next}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_a3bf920a09acfc2a26b42462c68a8cb48}\label{structprocess__thread__control__block_a3bf920a09acfc2a26b42462c68a8cb48}} 
+\hyperlink{structthread__control__block}{T\+CB} $\ast$ {\bfseries tcb\+\_\+thread}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_a1685f472448d01ec92e39723f37b15fc}\label{structprocess__thread__control__block_a1685f472448d01ec92e39723f37b15fc}} 
+\hyperlink{group__syscalls_gaec3f2f835e105271fbbc00272c0ba984}{Task} {\bfseries task}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_afe4baa9de9fc12a689b72c3445b0f024}\label{structprocess__thread__control__block_afe4baa9de9fc12a689b72c3445b0f024}} 
+int {\bfseries argl}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_a38980424abac6df706714f291678b3ef}\label{structprocess__thread__control__block_a38980424abac6df706714f291678b3ef}} 
+void $\ast$ {\bfseries args}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_abdf9ff5fef59069e1baa04ee7b5007f6}\label{structprocess__thread__control__block_abdf9ff5fef59069e1baa04ee7b5007f6}} 
+int {\bfseries exitval}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_a29d3645804b48e6f7a714086bf9d68b8}\label{structprocess__thread__control__block_a29d3645804b48e6f7a714086bf9d68b8}} 
+int {\bfseries flag\+\_\+exited}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_a43dc75a6794750aabd02eb22e3fc6726}\label{structprocess__thread__control__block_a43dc75a6794750aabd02eb22e3fc6726}} 
+\hyperlink{structCondVar}{Cond\+Var} {\bfseries join\+\_\+var}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_a5c73cb27a0e903385c3ce2ed0c45d0f1}\label{structprocess__thread__control__block_a5c73cb27a0e903385c3ce2ed0c45d0f1}} 
+int {\bfseries flag\+\_\+detached}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_af600ec6bb692b636bffaba41df739883}\label{structprocess__thread__control__block_af600ec6bb692b636bffaba41df739883}} 
+int {\bfseries refcount}
+\item 
+\mbox{\Hypertarget{structprocess__thread__control__block_aa2032e587ad7c485b380870951e9e8c6}\label{structprocess__thread__control__block_aa2032e587ad7c485b380870951e9e8c6}} 
+\hyperlink{group__rlists_ga8f6244877f7ce2322c90525217ea6e7a}{rlnode} {\bfseries thread\+\_\+node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The thread control block. 
+
+An object of this type is associated to every thread. In this object are stored all the metadata that relate to the thread. 
+
+Definition at line 90 of file kernel\+\_\+sched.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{kernel__sched_8h}{kernel\+\_\+sched.\+h}\end{DoxyCompactItemize}

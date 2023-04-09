@@ -1,0 +1,42 @@
+digraph "__rs_globals"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{__rs_globals\n|+ quit\l+ port\l+ listener\l+ listener_socket\l+ active_conn\l+ total_conn\l+ conn_id_counter\l+ logcount\l+ mx\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +conn_done" ,arrowhead="odiamond"];
+  Node2 [label="{CondVar\n|+ waitset\l+ waitset_lock\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCondVar.html",tooltip="Condition variables. "];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +log" ,arrowhead="odiamond"];
+  Node3 [label="{resource_list_node\n|+ obj\l+ num\l+ unum\l+ @5\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structresource__list__node.html",tooltip="List node. "];
+  Node4 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +pcb" ,arrowhead="odiamond"];
+  Node4 [label="{process_control_block\n|+ pstate\l+ exitval\l+ main_task\l+ argl\l+ args\l+ ptcb_count\l+ active_count\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structprocess__control__block.html",tooltip="Process Control Block. "];
+  Node2 -> Node4 [color="grey25",fontsize="10",style="solid",label=" +child_exit" ,arrowhead="odiamond"];
+  Node4 -> Node4 [color="grey25",fontsize="10",style="solid",label=" +parent" ,arrowhead="odiamond"];
+  Node3 -> Node4 [color="grey25",fontsize="10",style="solid",label=" +ptcb_list\n+children_node\n+children_list\n+exited_node\n+exited_list" ,arrowhead="odiamond"];
+  Node5 -> Node4 [color="grey25",fontsize="10",style="solid",label=" +FIDT" ,arrowhead="odiamond"];
+  Node5 [label="{file_control_block\n|+ refcount\l+ streamobj\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfile__control__block.html",tooltip="The file control block. "];
+  Node3 -> Node5 [color="grey25",fontsize="10",style="solid",label=" +freelist_node" ,arrowhead="odiamond"];
+  Node6 -> Node5 [color="grey25",fontsize="10",style="solid",label=" +streamfunc" ,arrowhead="odiamond"];
+  Node6 [label="{file_operations\n|+ Open\l+ Read\l+ Write\l+ Close\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfile__operations.html",tooltip="The device-specific file operations table. "];
+  Node7 -> Node4 [color="grey25",fontsize="10",style="solid",label=" +main_thread" ,arrowhead="odiamond"];
+  Node7 [label="{thread_control_block\n|+ priority\l+ context\l+ valgrind_stack_id\l+ type\l+ state\l+ phase\l+ thread_func\l+ wakeup_time\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structthread__control__block.html"];
+  Node4 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +owner_pcb" ,arrowhead="odiamond"];
+  Node3 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +sched_node" ,arrowhead="odiamond"];
+  Node7 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +prev\n+next" ,arrowhead="odiamond"];
+  Node8 -> Node7 [color="grey25",fontsize="10",style="solid",label=" +owner_ptcb" ,arrowhead="odiamond"];
+  Node8 [label="{process_thread_control\l_block\n|+ task\l+ argl\l+ args\l+ exitval\l+ flag_exited\l+ flag_detached\l+ refcount\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structprocess__thread__control__block.html",tooltip="The thread control block. "];
+  Node2 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +join_var" ,arrowhead="odiamond"];
+  Node4 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +parent" ,arrowhead="odiamond"];
+  Node3 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +thread_node" ,arrowhead="odiamond"];
+  Node7 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +tcb_thread" ,arrowhead="odiamond"];
+  Node8 -> Node8 [color="grey25",fontsize="10",style="solid",label=" +ptcb_next" ,arrowhead="odiamond"];
+  Node3 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +prev\n+node\n+next" ,arrowhead="odiamond"];
+  Node9 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +ccb" ,arrowhead="odiamond"];
+  Node9 [label="{core_control_block\n|+ id\l+ preemption\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcore__control__block.html",tooltip="Core control block. "];
+  Node7 -> Node9 [color="grey25",fontsize="10",style="solid",label=" +idle_thread\n+current_thread" ,arrowhead="odiamond"];
+  Node10 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +dcb" ,arrowhead="odiamond"];
+  Node10 [label="{device_control_block\n|+ type\l+ devnum\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdevice__control__block.html",tooltip="Device control block. "];
+  Node6 -> Node10 [color="grey25",fontsize="10",style="solid",label=" +dev_fops" ,arrowhead="odiamond"];
+  Node5 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +fcb" ,arrowhead="odiamond"];
+  Node7 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +tcb" ,arrowhead="odiamond"];
+  Node8 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +ptcb" ,arrowhead="odiamond"];
+}
